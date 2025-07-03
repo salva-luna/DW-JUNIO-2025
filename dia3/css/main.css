@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.padre {
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    background-color: rgb(8, 8, 95);
+    padding: 10px;
+}
+.hijo {
+    width: 50%;
+    height: 50%;
+    border: 3px dashed rgb(221, 19, 244);
+    background-color: rgb(255, 255, 255);
+    margin: 25%;
+}

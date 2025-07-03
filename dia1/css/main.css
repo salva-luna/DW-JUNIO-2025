@@ -1,0 +1,21 @@
+h1{
+    color:aqua;
+
+}
+.mih2 {
+    color:blueviolet;
+
+}
+#mih3{
+    color:blue;
+}
+h4{
+    color:rgb(105, 219, 66);
+}
+h5{
+    color:rgb(255, 0, 0);
+}
+
+h2:hover {
+    color: brown;
+}
