@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 40px;
+    background-color: #eaeaea;
+    font-family: monospace;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.container img:hover {
+    transform: scale(1.03);
+}
+
+.a {
+    filter: blur(2px);
+}
+
+.b {
+    filter: brightness(0.6);
+}
+
+.c {
+    filter: contrast(200%);
+}
+
+.d {
+    filter: drop-shadow(10px 16px 20px rgb(222, 222, 54));
+}
+
+.e {
+    filter: grayscale(300%);
+}
+
+.f {
+    filter: hue-rotate(90deg);
+}
+
+.g {
+    filter: invert(75%);
+}
+
+.h {
+    filter: opacity(50%);
+}
+
+.i {
+    filter: saturate(300%);
+}
+
+.j {
+    filter: sepia(60%);
+}
+
+.sombra {
+    background-color: rgb(219, 243, 103);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 20px;
+}
+
+.sombra h1 {
+    color: #ffffff;
+    text-shadow: 1px 3px 0 #969696, 1px 5px 5px #aba8a8;
+}
+
+.primero {
+    background-color: chartreuse;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    padding: 50px;
+
+    margin: 50px;
+}
+
+h2 {
+    color: #000000;
+    text-shadow: 2px 3px 5px #eaeaea;
+    text-indent: 2em;
+}
+
+.container-dos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: crimson;
+    padding: 5px;
+}
+
+.container-tres {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-dos img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.hombre {
+    mix-blend-mode: luminosity;
+}
+
+.bosque {
+    mix-blend-mode: color-burn;
+}
+
+.flor {
+    mix-blend-mode: screen;
+}
+
+.platillo {
+    mix-blend-mode: hard-light;
+}
+
+.forma1 {
+    background: linear-gradient(to right, rgb(28, 13, 130), white);
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: rotatey(45deg) rotateX(30deg);
+}
+
+.forma2 {
+    background: radial-gradient(chartreuse, white);
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    transform: rotatey(130deg) rotateX(150deg);
+}
+
+.forma3 {
+    background: repeating-linear-gradient(crimson, white);
+    width: 100px;
+    height: 100px;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    transform: rotatey(30deg) rotateX(120deg);
+}

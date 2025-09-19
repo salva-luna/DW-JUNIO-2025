@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js'></script>
+</head>
+
+<body>
+    <h1>Formularios de Ejemplo</h1>
+    <section class="form-container">
+        <h2>Formulario de Contacto</h2>
+        <form method="POST" action="url/de/envio" class="formulario contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Tu email">
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu telefono">
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe un comentario"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="form-container">
+        <h2>Formulario de Registro</h2>
+        <form method="POST" action="url/de/envio" class="formulario registro">
+            <label for="nombre-reg">Nombre:</label>
+            <input type="text" id="nombre-reg" name="nombre" required placeholder="Tu nombre">
+
+            <label for="usuario">Nombre de Usuario:</label>
+            <input type="text" id="usuario" name="usuario" required placeholder="Tu usuario">
+
+            <label for="email-reg">Email:</label>
+            <input type="email" id="email-reg" name="email" required placeholder="Tu email">
+
+            <label for="email-confirm">Repetir Email:</label>
+            <input type="email" id="email-confirm" name="email-confirm" required
+                placeholder="Escribe de nuevo tu email">
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required placeholder="Tu fecha de nacimiento">
+
+            <label for="edad-reg">Años comiendo galletas:</label>
+            <input type="number" id="edad-reg" name="edad" min="0" max="100" required
+                placeholder="Los años que llevas comiendo galletas">
+
+            <label for="ciudad-reg">Ciudad:</label>
+            <input type="text" id="ciudad-reg" name="ciudad-reg" list="lista-ciudades" required>
+            <datalist id="lista-ciudades">
+                <option value="Madrid">
+                <option value="Barcelona">
+                <option value="Valencia">
+                <option value="Sevilla">
+                <option value="Bilbao">
+                <option value="Zaragoza">
+                <option value="Málaga">
+                <option value="Murcia">
+                <option value="Palma de Mallorca">
+                <option value="Granada">
+            </datalist>
+
+            <label for="archivo">Subir Archivo:</label>
+            <input type="file" id="archivo" name="archivo" accept=".jpg, .jpeg, .png, .pdf">
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </section>
+
+    <section class="form-container">
+        <h2>Formulario de Login</h2>
+        <form method="POST" action="url/de/envio" class="formulario login">
+            <label for="user-login">Usuario o Email:</label>
+            <input type="text" id="user-login" name="usuario" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required required pattern=".{8,}"
+                title="La contraseña debe tener al menos 8 caracteres">
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </section>
+
+    <section class="form-container">
+        <h2>Audio settings:</h2>
+        <input class="volumen" type="range" id="volumen" name="volumen" min="0" max="10" />
+        <label for="volumen">Volumen</label>
+    </section>
+</body>
+
+</html>

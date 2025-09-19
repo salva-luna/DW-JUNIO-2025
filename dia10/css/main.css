@@ -1,0 +1,44 @@
+div {
+    width: 50vw;
+    padding: calc(2rem + 10px);
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 2vh;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: calc(9vw +100px);
+  color: darkblue;
+}
+
+h2 {
+  font-size: 2em;
+  color: darkgreen;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.6em;
+  max-width: 90vh;
+  color: #333;
+}
+
+button {
+  font-size: 3vw;
+  padding: 1vh 2vw;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

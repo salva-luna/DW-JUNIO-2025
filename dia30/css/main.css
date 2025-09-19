@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button{
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    background-color: lightblue;
+    border-radius: 5px;
+    cursor: pointer;   
+}
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(201, 228, 239);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f3f3f3;
+  padding: 20px;
+}
+
+
+input {
+  width: 120px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 18px;
+  text-align: right;
+}
+
+.calculadora {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+button.numero {
+  padding: 15px;
+  font-size: 18px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.numero:hover {
+  background: #2980b9;
+}
+
+.operadores {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+button.operador {
+  padding: 15px 20px;
+  font-size: 20px;
+  background: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.operador.activo {
+  background: #d35400;
+}
+
+#calcular {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#resultado {
+  margin-top: 15px;
+  font-size: 20px;
+  color: #2c3e50;
+  font-weight: bold;
+}

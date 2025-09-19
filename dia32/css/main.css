@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: #aeb1ea;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* --- Ejercicio 1-1 --- */
+.primer-div {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 400px;
+}
+
+#primer-parrafo {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    padding: 20px;
+    background: white;
+    color: black;
+
+}
+
+#primer-boton {
+    background: #4e54c8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#primer-boton:hover {
+    background: #6c63ff;
+    transform: translateY(-2px);
+}
+
+/* --- Ejercicio 1-2 --- */
+.segundo-div {
+    width: 400px;
+    height: auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+}
+
+.segundo-div span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.segundo-boton {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.segundo-boton:hover {
+    background: #feb47b;
+    transform: scale(1.05);
+}
+
+.tercer-contendor {
+    width: 400px;
+    height: auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+
+.tercer-div {
+    width: 150px;
+    height: 150px;
+    background: #6c63ff;
+    border-radius: 12px;
+    transition: transform 0.6s ease;
+}
+
+.tercer-boton {
+    background: #4e54c8;
+    margin: 10px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cuarto-div {
+    width: 400px;
+    height: auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+}
+
+.cuarto-div span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.cuarto-boton {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Ejercicio 2-3 */
+
+.quinto-div {
+    width: 400px;
+    height: auto;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+}
+
+.quinto-div span {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.quinto-boton {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.quinto-boton:hover {
+    background: #feb47b;
+    transform: scale(1.05);
+}
+
+
+/* Ejercicio 3-1 */
+
+.tabla {
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px auto;
+    width: 400px;
+}
+
+td {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sexto-boton {
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+}

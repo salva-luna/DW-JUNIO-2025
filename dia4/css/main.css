@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.ej1 div {
+    background-color: red;
+    display: inline
+}
+
+.ej1 span {
+    background-color: blue;
+    display: inline-block;
+}
+
+.ej2 div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.ej2 div:nth-child(1) {
+    background-color: rgb(255, 249, 141);
+}
+
+.ej2 div:nth-child(2) {
+    background-color: rgb(175, 255, 121);
+}
+
+.ej2 div:nth-child(3) {
+    background-color: rgb(118, 255, 248);
+}
+.ej2.ej2-1 div:nth-child(2) {
+   display: none;
+}
+.ej2.ej2-2 div {
+   display: inline-block;
+}
+.h1 {
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.ej3 header{
+    background-color: rgb(201, 199, 244);;
+    height: 200px
+}
+
+.ej3 header ul{
+    display: inline;
+    list-style: none;
+    position: absolute;
+    top: 80px;  
+    right: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(75, 74, 97);
+}
+
+.ej3 header li{
+    display:inline;
+}
+.ej3 header li a{
+    cursor: pointer
+}
+
+.ej3 header li a:hover{
+    color: rgb(72, 61, 104);
+}
+
+.ej3 header nav{
+    display: inline;
+}   
+
+.ej3 header img{
+    display: inline;
+    height: 100%;
+}
+
+.ej3 main{
+    min-height: calc(100vh-125px);
+    text-align: center;
+}
+.ej3 footer{
+    background-color: rgb(201, 199, 244);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(75, 74, 97);
+}
