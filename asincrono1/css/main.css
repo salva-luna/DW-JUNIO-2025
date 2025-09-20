@@ -6,7 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
     background: #fafafa;
     color: #333;
 }
@@ -40,8 +41,6 @@ body {
     text-decoration: none;
 }
 
-.header__li {}
-
 .header__a--nav {
     text-decoration: none;
     color: black;
@@ -51,130 +50,122 @@ body {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
-.header__menu {}
+.header__menu {
+    width: 20px;
+    aspect-ratio: 1/1;
+}
 
 
 /* Main */
 
-.main {}
 
 .main__gallery {
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.main__gallery--grid {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(6, 1fr);
-    /* 6 columnas */
-    grid-template-rows: repeat(5, 13.4%);
-    /* 5 filas */
+    grid-template-rows: repeat(5, 220px);
     gap: 0.625rem;
+    
 }
 
-
-.main__img {
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+.main__gallery div {
+    background-size: cover;
+    background-position: center;
 }
 
-.main__img:hover {
+.main__gallery div:hover {
     transform: scale(1.05);
 }
+
 
 /* Posicionamiento de los items en la cuadrícula */
 
 .main__item--one {
     grid-area: 1/1/1/1;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-1-500x500.jpg");
 }
 
 .main__item--two {
     grid-area: 1/2/1/2;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-2-500x500.jpg");
 }
 .main__item--three {
-    grid-area: 1/3/2/3;
-    background: rgb(194, 48, 194);
+    grid-area: 1/3/3/3;
+    background-image: url("../images/Masonry-list-img-3-500x1000.jpg");
 }
 .main__item--four {
     grid-area: 1/4/1/4;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-4-500x500.jpg");
+
 }
 .main__item--five {
-    grid-area: 1/5/2/7;
-    background: rgb(194, 48, 194);
+    grid-area: 1/5/3/7;
+    background-image: url("../images/Masonry-list-img-5-1000x1000.jpg");
 }
 .main__item--six {
     grid-area: 2/1/2/1;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-6-500x500.jpg");
 }
 .main__item--seven {
     grid-area: 2/2/2/2;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-7-500x500.jpg");
 }
 .main__item--eight {
     grid-area: 2/4/2/4;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-8-500x500.jpg");
 }
 .main__item--nine {
-    grid-area: 3/1/4/3;
-    background: rgb(194, 48, 194);
+    grid-area: 3/1/5/3;
+    background-image: url("../images/Masonry-list-img-9-1000x1000.jpg");
 }
 .main__item--ten {
     grid-area: 3/3/3/3;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-10-500x500.jpg");
 }
 .main__item--eleven {
     grid-area: 3/4/3/4;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-11-500x500.jpg");
 }
 .main__item--twelve {
-    grid-area: 3/5/4/5;
-    background: rgb(194, 48, 194);
+    grid-area: 3/5/5/5;
+    background-image: url("../images/Masonry-list-img-12-500x1000.jpg");
 }
 .main__item--thirteen {
     grid-area: 3/6/3/6;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-13-500x500.jpg");
 }
 .main__item--fourteen {
     grid-area: 4/4/4/4;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-14-500x500.jpg");
 }
 .main__item--fifteen {
     grid-area: 4/3/4/3;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-15-500x500.jpg");
 }
 .main__item--sixteen {
     grid-area: 4/6/4/6;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-16-500x500.jpg");
 }
 .main__item--seventeen {
     grid-area: 5/3/5/5;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-17-1000x500.jpg");
 }
 .main__item--eighteen {
     grid-area: 5/6/5/6;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-18-500x500.jpg");
 }
 .main__item--nineteen {
     grid-area: 5/1/5/1;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-19-500x500.jpg");
 }
 .main__item--twenty {
     grid-area: 5/2/5/2;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-20-500x500.jpg");
 }
 .main__item--twentyone {
     grid-area: 5/5/5/5;
-    background: rgb(194, 48, 194);
+    background-image: url("../images/Masonry-list-img-21-500x500.jpg");
 }
-
-
 
 
 /* Footer */
@@ -186,9 +177,15 @@ body {
     padding: 40px;
 }
 
-.footer__h1 {}
+.footer__logo {
+    margin-bottom: 20px;
+}
 
-.footer__p {}
+.footer__p {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
 
 .footer__social {
     display:flex;
@@ -205,9 +202,74 @@ body {
 }
 
 .footer__link {
+    text-decoration: none;
+    color: black;
 }
 
-.footer__copy {}
+/* Media Queries */
+
+/* Tablets (pantallas medianas) */
+
+@media (max-width: 1024px) {
+    .main__gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-rows: auto; /* filas automáticas */
+        
+    }
+
+    .main__gallery > div {
+        grid-area: auto !important; /* resetea las posiciones fijas */
+        height: 400px; /* todas iguales de alto */
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .main__gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+
+    .main__gallery > div {
+        height: 400px;
+    }
+
+    .header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header__ul {
+        display: none;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .main__gallery {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    .main__gallery > div {
+        height: 400px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .header__a--nav {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
 
 
+    .footer__social {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
 
