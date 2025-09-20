@@ -1,0 +1,17 @@
+fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+.then ( response => response.json() )
+.then (data => console.log( data) )
+.catch ( data => console.log('Fallo', error) )
+.finally( data => console.log('Final') )
+
+fetch("https://randomuser.me/api/")
+.then ( response => response.json() )
+.then (data => console.log( data) )
+.catch ( data => console.log('Fallo', error) )
+.finally(data => console.log('Final') )
+
+fetch("https://fakestoreapi.com/products?limit=3")
+.then ( response => response.json() )
+.then (data => console.log( data) )
+.catch ( data => console.log('Fallo', error) )
+.finally( data => console.log('Final') )
