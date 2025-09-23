@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ejercicio1-1__div {
+    width: 100px;
+    height: 100px;
+    background-color: #667eea;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    transition: transform 1s, background-color 1s;
+}
+
+
+.animado {
+    transform: rotate(180deg);
+    background-color: purple;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.caja {
+    background: #f9f9f9;
+    border-left: 5px solid #667eea;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.ejercicio1-2__p {
+    margin: 0;
+    color: cornflowerblue;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.transition-2 {
+    transition: color 1s, font-size 1s;
+}
+
+.ejercicio1-3__div {
+    height: 100px;
+    width: 100px;
+    background-color: #667eea;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    transition: width 2s, height 2s;
+}
+
+.tamano {
+    height: 200px;
+    width: 200px;
+    background-color: #667eea;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    transition: width 2s, height 2s;
+}
+
+.cuadrado {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  float: left; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+}
+
