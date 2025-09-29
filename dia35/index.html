@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js' defer></script>
+</head>
+
+<body>
+
+    <div class="slideshow-container">
+        <div class="my-slides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/pexels-ludawigakwana-12091690.jpg" style="width:100%">
+            <div class="text">Caption Text</div>
+        </div>
+        <div class="my-slides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/pexels-ella-olsson-572949-1334131.jpg" style="width:100%">
+            <div class="text">Caption Two</div>
+        </div>
+        <div class="my-slides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/pexels-julia-m-cameron-6995247.jpg" style="width:100%">
+            <div class="text">Caption Three</div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="slider-track">
+            <button class="btn prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="btn next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+    </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+</body>
+
+</html>

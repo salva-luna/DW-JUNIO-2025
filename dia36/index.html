@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js' defer></script>
+</head>
+
+<body>
+    <header>
+        <ul role="tablist">
+            <li id="menu-1" class="active" role="tab" aria-selected="true" onclick="menu(1)">menu 1</li>
+            <li id="menu-2" role="tab" aria-selected="false" onclick="menu(2)">menu 2</li>
+            <li id="menu-3" role="tab" aria-selected="false" onclick="menu(3)">menu 3</li>
+            <li id="menu-4" role="tab" aria-selected="false" onclick="menu(4)">menu 4</li>
+        </ul>
+    </header>
+
+    <main>
+        <div class="active" id="div-1">
+            <h1>titulo 1</h1>
+            <img onclick="open_img('img/1.jpeg')" src="images/Tablero 5-03.png">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium excepturi similique culpa omnis!
+            Aspernatur!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus vitae numquam reprehenderit architecto
+            deserunt ipsam alias minus magni maiores nemo.
+        </div>
+
+        <div id="div-2">
+            <h1>titulo 2</h1>
+            <img onclick="open_img('img/2.jpeg')" src="images/Tablero 5-04.png">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum mollitia, ad sit architecto
+            deleniti!Lorem20
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, dolor corrupti odio nihil nemo veniam.
+        </div>
+
+        <div id="div-3">
+            <h1>titulo 3</h1>
+            <img onclick="open_img('img/3.jpeg')" src="images/Tablero 5-05.png">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium excepturi similique culpa omnis!
+            Aspernatur!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus vitae numquam reprehenderit architecto
+            deserunt ipsam alias minus magni maiores nemo.
+        </div>
+
+        <div id="div-4">
+            <h1>titulo 4</h1>
+            <img onclick="open_img('img/4.jpeg')" src="images/Tablero 5-06.png">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat laudantium excepturi similique culpa omnis!
+            Aspernatur!
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus vitae numquam reprehenderit architecto
+            deserunt ipsam alias minus magni maiores nemo.
+        </div>
+    </main>
+
+    <section class="cards-3d">
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h2>Tarjeta 1</h2>
+                </div>
+                <div class="card-back">
+                    <img src="images/2.jpg" alt="Imagen 1">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h2>Tarjeta 2</h2>
+                </div>
+                <div class="card-back">
+                    <img src="images/4.jpg" alt="Imagen 2">
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h2>Tarjeta 3</h2>
+                </div>
+                <div class="card-back">
+                    <img src="images/5.jpg" alt="Imagen 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejercicio Nivel 2 -->
+
+    <div class="video">
+        <video class="video__src" autoplay loop muted>
+            <source src="https://www.pexels.com/download/video/4280455/">
+        </video>
+    </div>
+
+    <!-- Ejercicio Nivel 2, Tercera Seccion -->
+    <section class="jueguito">
+        <div class="numero-aleatorio">
+            <button class="numero__elegir" onclick="jugar()">Juega & gana</button>
+        </div>
+
+        <div id="resultado"></div>
+        <div id="mensaje"></div>
+    </section>
+
+</body>
+
+</html>

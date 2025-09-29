@@ -11310,3 +11310,44 @@ botones.forEach(boton => {
 });
 
 //lighbox personalizado//
+
+// function open_img(url) {
+//     document.querySelector('#lightbox img').setAttribute("src", url);
+//     document.querySelector('#lightbox').classList.add("active");
+
+//     if (!lightbox.querySelector(".delete-button")) {
+//         const close = document.createElement("button");
+//         button.textContent = "X";
+//         button.classList.add('delete-button');
+//         button.addEventListener("click", close_img);
+//         exit.appendChild(button);
+//     };
+
+// }
+
+// function close_img() {
+//     document.querySelector("#lightbox").classList.remove("active");
+
+// }
+
+function open_img(url) {
+    const lightbox = document.querySelector('#lightbox');
+    const img = lightbox.querySelector('img');
+
+    img.setAttribute("src", url);
+    lightbox.classList.add("active");
+
+    // Si no existe el botón, lo creamos
+    if (!lightbox.querySelector(".delete-button")) {
+        const button = document.createElement("button");
+        button.textContent = "X";
+        button.classList.add("delete-button");
+        button.addEventListener("click", close_img);
+        lightbox.appendChild(button);
+    }
+}
+
+function close_img() {
+    document.querySelector("#lightbox").classList.remove("active");
+}
+

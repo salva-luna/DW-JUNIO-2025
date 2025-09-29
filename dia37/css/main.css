@@ -1,0 +1,97 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* ejemplo 1 */
+
+.parallax {
+      height: 100vh; 
+      background-attachment: fixed; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .parallax.a {
+      background-image: url("../images/pexels-ella-olsson-572949-1334131.jpg");
+    }
+
+    .parallax.b {
+      background-image: url("../images/pexels-kpaukshtite-712876.jpg");
+    }
+
+    .contenido {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      background: #a29bfe;
+    }
+
+/* ejemplo 2 */
+
+body {
+    background: #a29bfe;
+}
+
+#container {
+    margin: 10em auto;
+    height: 10em;
+    width: 10em;
+    position: relative;
+}
+
+#square1 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 100%;
+    background: #dfe6e9;
+    box-shadow: inset -10px -5px 0px 0px rgba(178, 190, 195, .3)
+}
+
+.eyeball {
+    width: 50%;
+    height: 50%;
+    background: #2d3436;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border-radius: 100%;
+    overflow: hidden;
+} 
+
+
+/* Ejercicio 3*/
+
+#scene {
+    width: 1000px;     
+    height: 600px;    
+    position: relative;
+    overflow: hidden; 
+    margin: auto;     
+}
+
+.layer {
+    position: absolute;
+    justify-content: center;
+    width: 110%;
+    height: 110%;
+    top: 0;
+    left: 0;
+}
+
+.layer img {
+    width: 110%;
+    height: auto;
+    display: block;
+}

@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4facfe, #00f2fe); 
+}
+
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+li {
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+li:hover {
+    color: red;
+    background-color: gray;
+}
+
+li:active {
+    color: white;
+    background-color: black;
+}
+
+li.active:hover {
+    color: red;
+    background-color: black;
+}
+
+main {
+    width: 96vw;
+    border-top: 1px solid;
+    padding: 2vw;
+    text-align: justify;
+}
+
+main>div {
+    display: none;
+}
+
+div.active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+main img {
+    width: 20vw;
+    margin: 40px;
+    cursor: pointer;
+}
+
+/* Primera seccion */
+
+.cards-3d {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    perspective: 1000px;
+}
+
+.descripcion {
+    justify-content: center;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    perspective: inherit;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-front {
+    background: #ffffff;
+    color: #111;
+}
+
+.card-back {
+    background: #000;
+    transform: rotateY(180deg);
+}
+
+.card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nivel 2 */
+
+.video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.video__src {
+    width: 100vw;
+    margin-top: 50px;
+    margin-bottom: 5
+}
+
+/* Ejercicio Nivel 2, Tercera Seccion */
+
+
+.numero-aleatorio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.numero__elegir {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.numero__elegir:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+}
+
+.numero__elegir:active {
+  transform: scale(0.95);
+}
+
+#resultado, #mensaje {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  min-height: 30px;
+  transition: all 0.3s ease-in-out;
+}
+
+#resultado {
+  color: #ffffff;
+  font-size: 1.6rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+
+#mensaje.ganar {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 255, 183, 0.6);
+}
+
+#mensaje.perder {
+  color: #ff4d6d;
+  text-shadow: 0 0 8px rgba(255, 77, 109, 0.6);
+}
+
+.jueguito {
+    margin-bottom: 100px;
+}
