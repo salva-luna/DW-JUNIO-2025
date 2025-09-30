@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js' defer></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+     <header class="site-header">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo">
+                <img src="images/logo.png" alt="Logo Arte en Pared" />
+            </a>
+
+
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#inicio">Inicio</a>
+                <a href="#quienes">Quiénes somos</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#ubicacion">Ubicación</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Productos / Galería -->
+        <section id="productos" class="section">
+            <div class="container">
+                <h2>Galería de Pósters</h2>
+
+                <div class="products">
+                    <!-- Producto 1 -->
+                    <div class="product">
+                        <img src="images/1.jpeg" alt="Póster 1" onclick="open_img(this.src)">
+                        <div class="product-info">
+                            <h4>Póster A</h4>
+                            <p class="prod-desc">Composición geométrica en tonos cálidos.</p>
+                            <div class="prod-meta">€18 · 30x40 cm</div>
+                            <button class="btn view-btn">Ver</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="product">
+                        <img src="images/2.jpeg" alt="Póster B" onclick="open_img(this.src)">
+                        <div class="product-info">
+                            <h4>Póster B</h4>
+                            <p class="prod-desc">Ilustración botánica minimalista.</p>
+                            <div class="prod-meta">€22 · 40x50 cm</div>
+                            <button class="btn view-btn">Ver</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="product">
+                        <img src="images/3.jpeg" alt="Póster C" onclick="open_img(this.src)">
+                        <div class="product-info">
+                            <h4>Póster C</h4>
+                            <p class="prod-desc">Paisaje abstracto con textura.</p>
+                            <div class="prod-meta">€20 · 30x40 cm</div>
+                            <button class="btn view-btn">Ver</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="product">
+                        <img src="images/3.jpeg" alt="Póster C" onclick="open_img(this.src)">
+                        <div class="product-info">
+                            <h4>Póster C</h4>
+                            <p class="prod-desc">Paisaje abstracto con textura.</p>
+                            <div class="prod-meta">€20 · 30x40 cm</div>
+                            <button class="btn view-btn">Ver</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="product">
+                        <img src="images/3.jpeg" alt="Póster C" onclick="open_img(this.src)">
+                        <div class="product-info">
+                            <h4>Póster C</h4>
+                            <p class="prod-desc">Paisaje abstracto con textura.</p>
+                            <div class="prod-meta">€20 · 30x40 cm</div>
+                            <button class="btn view-btn">Ver</button>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="product">
+                        <img src="images/3.jpeg" alt="Póster C" onclick="open_img(this.src)">
+                        <div class="product-info">
+                            <h4>Póster C</h4>
+                            <p class="prod-desc">Paisaje abstracto con textura.</p>
+                            <div class="prod-meta">€20 · 30x40 cm</div>
+                            <button class="btn view-btn">Ver</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox único -->
+        <div id="lightbox" class="lightbox hidden">
+            <div id="background" onclick="close_img()"></div>
+            <img id="lbImage" src="" alt="Póster ampliado">
+            <button class="lb-close" onclick="close_img()">✕</button>
+        </div>
+    </main>
+
+</body>
+
+</html>

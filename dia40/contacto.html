@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Index</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css/main.css'>
+    <script src='js/main.js' defer></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo">
+                <img src="images/logo.png" alt="Logo Arte en Pared" />
+            </a>
+
+
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#inicio">Inicio</a>
+                <a href="#quienes">Quiénes somos</a>
+                <a href="#productos">Productos</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#ubicacion">Ubicación</a>
+            </nav>
+        </div>
+    </header>
+
+     <!-- Sección contacto -->
+        <section id="contacto" class="section contact-section">
+            <div class="container">
+                <h2>Contacto</h2>
+                <div class="split">
+                    <div>
+                        <p>¿Tienes una idea o quieres encargar una impresión personalizada? Escríbenos.</p>
+
+
+                        <form id="contactForm" novalidate>
+                            <label for="name">Nombre *</label>
+                            <input id="name" name="name" type="text" required>
+
+
+                            <label for="email">Correo electrónico *</label>
+                            <input id="email" name="email" type="email" required>
+
+
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+
+
+                            <label for="attach">Imagen personalizada (opcional)</label>
+                            <input id="attach" name="attach" type="file" accept="image/*">
+
+
+                            <div id="filePreview" class="file-preview"></div>
+
+
+                            <button type="submit" class="btn">Enviar mensaje</button>
+                            <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+
+                    <aside class="contact-card">
+                        <h3>Información</h3>
+                        <p><strong>Dirección:</strong> C/ Falsa 123, 08000 Ciudad Creativa</p>
+                        <p><strong>Horario:</strong> Lun-Vie 10:00 - 18:00</p>
+                        <p><strong>Teléfono:</strong> +34 600 000 000</p>
+                        <p><strong>Email:</strong> hola@arteenpared.example</p>
+
+
+                        <div class="socials">
+                            <a class="social" aria-label="Instagram">Instagram</a>
+                            <a class="social" aria-label="Facebook">Facebook</a>
+                            <a class="social" aria-label="Pinterest">Pinterest</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        
+
+</body>
+
+</html>
