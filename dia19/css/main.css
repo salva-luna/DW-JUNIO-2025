@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  padding: 2rem;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section__title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Nivel 1  */
+.boxes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.box--wide:hover {
+  width: 200px;
+}
+
+.box--tall:hover {
+  height: 200px;
+}
+
+.box--big:hover {
+  width: 200px;
+  height: 200px;
+}
+
+
+.box--color:hover {
+  background: darkblue;
+  transform: scale(1.3);
+}
+
+
+.box--text {
+  position: relative;
+  background: blue;
+  overflow: hidden;
+}
+
+.box__label {
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.box--text:hover .box__label {
+  opacity: 1;
+}
+
+/*  Nivel 2  */
+.anim {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin: 1rem;
+  display: inline-block;
+}
+
+
+.anim--width {
+  background: lightblue;
+  animation: widen 2s infinite alternate;
+}
+
+@keyframes widen {
+  from { width: 100px; }
+  to { width: 200px; }
+}
+
+.anim--rotate {
+  background: green;
+  animation: spin 3s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.anim--color {
+  background: lightblue;
+  animation: colorchange 3s infinite alternate;
+}
+
+@keyframes colorchange {
+  from { background: darkblue; }
+  to { background: blue; }
+}
+
+/* Texto parpadeando */
+.blink {
+  animation: blink 1s infinite;
+  text-align: center;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Cuadro que se mueve */
+.anim--move {
+  background: blue;
+  animation: moveX 3s infinite alternate;
+}
+
+@keyframes moveX {
+  from { transform: translateX(0); }
+  to { transform: translateX(200px); }
+}
+
+/*  Nivel 3  */
+/* Scroll-timeline (solo navegadores modernos con soporte experimental) */
+.scroll-box {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  margin: 50vh auto;
+  animation: grow 2s linear;
+  animation-timeline: scroll();
+}
+
+@keyframes grow {
+  from { transform: scale(1); }
+  to { transform: scale(2); }
+}
+
+/* fill-mode */
+.final-box {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  margin: 2rem auto;
+  animation: fadeOut 2s forwards; /* mantiene el último estado */
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0.2; }
+}
+
+/* cubic-bezier */
+.ease-box {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  margin: 2rem auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-80px); }
+}
+
+.ease-box {
+  animation-timing-function: cubic-bezier(.68,-0.55,.27,1.55);
+}
