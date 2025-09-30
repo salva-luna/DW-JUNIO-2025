@@ -1,44 +1,100 @@
-div {
-    width: 50vw;
-    padding: calc(2rem + 10px);
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 
-:root {
-  font-size: 16px;
-}
 
 body {
-  margin: 2vh;
-  font-family: sans-serif;
-}
-
-h1 {
-  font-size: calc(9vw +100px);
+  font-family: Arial, sans-serif;
+  padding: 20px;
   color: darkblue;
 }
+/* Nivel 1*/
 
+
+h1 {
+  font-size: 32px; 
+}
 h2 {
-  font-size: 2em;
-  color: darkgreen;
+  font-size: 2em; 
 }
-
 p {
-  font-size: 1.5rem;
-  line-height: 1.6em;
-  max-width: 90vh;
-  color: #333;
+  font-size: 1rem; 
+  width: 60%;     
 }
-
 button {
-  font-size: 3vw;
-  padding: 1vh 2vw;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 0.5em;
+  font-size: 2vh;  
+  padding: 1vw 2vw;
+  border-radius: 10px;
+  background: darkblue;
   cursor: pointer;
+  margin: 20px;
+  font-weight: bold;
+  color: white;
 }
 
-button:hover {
-  background-color: #0056b3;
+.box1 {
+  width: 200px;
+  font-size: 20px;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+.box1 p {
+  font-size: 1.5em; 
+}
+
+
+.box2 {
+  width: 50vw;
+  padding: calc(2rem + 5px);
+  background: #c8c6c6;
+  margin: 10px 0;
+}
+
+/* h1 con calc */
+.calc-h1 {
+  font-size: calc(2vw + 10px);
+  color: rgb(203, 91, 31);
+}
+
+/* Nivel 2 */
+.readable {
+  max-width: 60vh;   
+  line-height: 1.6em;
+  background: #fafafa;
+  padding: 1rem;
+  border: 1px dashed #aaa;
+}
+
+.fluid-h1 {
+  font-size: 5vw; 
+  color: rgb(56, 166, 56);
+}
+.fluid-p {
+  font-size: 2vh; /* fluido según alto pantalla */
+}
+
+/* Nivel 3 */
+
+
+@font-face {
+  font-family: "MiFuente";
+  src: url("fonts/MiFuente.woff2") format("woff2");
+}
+.custom-font {
+  font-family: "MiFuente", serif;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.variable-font {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-stretch: 120%;
+  font-style: italic;
+  font-variation-settings: "wght" 700, "wdth" 120;
 }
