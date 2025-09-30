@@ -100,3 +100,41 @@ sextoboton.addEventListener('click', () => {
 
 
 //ejercicio 3-3
+
+document.addEventListener("DOMContentLoaded", () => {
+    const caja = document.getElementById("miDiv");
+    const moverBtn = document.getElementById("moverBtn");
+    const centrarBtn = document.getElementById("centrarBtn");
+
+    // Posición aleatoria dentro de la ventana
+    function moverAleatorio() {
+        const viewportWidth = window.innerWidth;
+        const viewportHeight = window.innerHeight;
+
+        const cajaWidth = caja.offsetWidth;
+        const cajaHeight = caja.offsetHeight;
+
+        // Posiciones aleatorias sin que se salga de la pantalla
+        const maxX = viewportWidth - cajaWidth;
+        const maxY = viewportHeight - cajaHeight;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        // Aplicar las nuevas posiciones
+        caja.style.left = randomX + "px";
+        caja.style.top = randomY + "px";
+        caja.style.transform = "translate(0, 0)";
+    }
+
+    // centrar la caja 
+    function centrarCaja() {
+        caja.style.left = "50%";
+        caja.style.top = "50%";
+        caja.style.transform = "translate(-50%, -50%)";
+    }
+
+    // Eventos
+    moverBtn.addEventListener("click", moverAleatorio);
+    centrarBtn.addEventListener("click", centrarCaja);
+});
