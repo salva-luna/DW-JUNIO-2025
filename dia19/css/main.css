@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: darkblue;
+}
 /* Nivel 1*/
 
 
@@ -22,10 +28,11 @@ button {
   font-size: 2vh;  
   padding: 1vw 2vw;
   border-radius: 10px;
-  background: lightblue;
+  background: darkblue;
   cursor: pointer;
-  box-shadow: rgb(96, 135, 149) 2px 2px 5px;
   margin: 20px;
+  font-weight: bold;
+  color: white;
 }
 
 .box1 {
@@ -43,14 +50,14 @@ button {
 .box2 {
   width: 50vw;
   padding: calc(2rem + 5px);
-  background: #f0f0f0;
+  background: #c8c6c6;
   margin: 10px 0;
 }
 
 /* h1 con calc */
 .calc-h1 {
   font-size: calc(2vw + 10px);
-  color: darkblue;
+  color: rgb(203, 91, 31);
 }
 
 /* Nivel 2 */
@@ -64,7 +71,7 @@ button {
 
 .fluid-h1 {
   font-size: 5vw; 
-  color: darkgreen;
+  color: rgb(56, 166, 56);
 }
 .fluid-p {
   font-size: 2vh; /* fluido según alto pantalla */
