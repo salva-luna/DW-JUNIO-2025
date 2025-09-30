@@ -1,4 +1,4 @@
-// Genera un color aleatorio en formato hex (#rrggbb)
+//Color aleatorio
 function randomColorHex() {
   const r = Math.floor(Math.random()*256);
   const g = Math.floor(Math.random()*256);
@@ -7,7 +7,7 @@ function randomColorHex() {
   return '#' + h(r) + h(g) + h(b);
 }
 
-// Determina si el texto debe ser oscuro o claro para que se vea bien
+//texto
 function pickContrastTextColor(hex) {
   const r = parseInt(hex.slice(1,3), 16);
   const g = parseInt(hex.slice(3,5), 16);
@@ -16,7 +16,7 @@ function pickContrastTextColor(hex) {
   return lum > 150 ? '#111' : '#fff';
 }
 
-// Selección de botones y etiqueta del color actual
+// DOM
 const btns = document.querySelectorAll('.color-btn');
 const currentColor = document.getElementById('currentColor');
 
