@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+textarea {
+    width: 500px;
+    height: 100px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    resize: vertical; 
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px;
+}
+
+p {
+    background-color: #c8efd2;
+    border-radius: 10px;
+    color: black;
+    margin: 20px;
+    height: 100px;
+    width: 500px;
+    font-size: 30px;
+}
+
+#num1 #num2 {
+    width: 100px;
+    height: 30px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin-right: 10px;
+}   
+
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    width: 500px;
+    padding: 50px;
+    border-radius: 5px;
+    background-color: #edecff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
