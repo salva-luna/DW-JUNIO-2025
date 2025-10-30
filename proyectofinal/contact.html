@@ -12,6 +12,10 @@ Estructura:
 <html lang="es">
   <head>
     <meta charset="utf-8" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32" />
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -124,7 +128,7 @@ Estructura:
     <!-- =========================
 CONTACTO
 ============================ -->
-<!--Descripcion: Contenido principal de la pagina que incluye el titulo, la informacion de contacto y el formulario-->
+    <!--Descripcion: Contenido principal de la pagina que incluye el titulo, la informacion de contacto y el formulario-->
     <section class="contacto">
       <div class="contacto__envoltorio">
         <!-- TITULO
@@ -156,7 +160,6 @@ CONTACTO
         <!-- Info de contacto
          Descripcion: Para mantener los elementos a la derecha inserte un aside  -->
         <aside class="contacto__caja" aria-labelledby="contacto-titulo-info">
-
           <section class="contacto__informacion">
             <h2 class="contacto__subtitulo">Contact</h2>
 
@@ -164,7 +167,9 @@ CONTACTO
               <div class="contacto__item">
                 <dt class="contacto__etiqueta">Email</dt>
                 <dd class="contacto__dato">
-                  <a href="mailto:adri.salvadorluna@gmail.com" class="contacto__enlace"
+                  <a
+                    href="mailto:adri.salvadorluna@gmail.com"
+                    class="contacto__enlace"
                     >adri.salvadorluna@gmail.com</a
                   >
                 </dd>
@@ -240,6 +245,21 @@ CONTACTO
                       minlength="10"
                       required
                     ></textarea>
+                  </div>
+
+                  <!-- Honeypot (anti-spam) / Esto lo hice con ayuda de la IA porque me daba problemas de seguridad he investigue que esta era una forma sencilla de hacerlo -->
+                  <div class="contacto__hp-wrap" aria-hidden="true">
+                    <label for="company_website" class="sr-only"
+                      >Company website</label
+                    >
+                    <input
+                      id="company_website"
+                      name="company_website"
+                      class="contacto__hp"
+                      type="text"
+                      tabindex="-1"
+                      autocomplete="off"
+                    />
                   </div>
 
                   <div class="contacto__acciones">
@@ -336,36 +356,36 @@ CONTACTO
                 >Going so soon? Bummer... Shoot me a message before
                 leaving.</span
               >
-              <span>⚛</span>
+              <span>|</span>
               <span
                 >Going so soon? Bummer... Shoot me a message before
                 leaving.</span
               >
-              <span>⚛</span>
+              <span>|</span>
             </div>
             <div class="footer__grupo" aria-hidden="true">
               <span
                 >Going so soon? Bummer... Shoot me a message before
                 leaving.</span
               >
-              <span>⚛</span>
+              <span>|</span>
               <span
                 >Going so soon? Bummer... Shoot me a message before
                 leaving.</span
               >
-              <span>⚛</span>
+              <span>|</span>
             </div>
             <div class="footer__grupo" aria-hidden="true">
               <span
                 >Going so soon? Bummer... Shoot me a message before
                 leaving.</span
               >
-              <span>⚛</span>
+              <span>|</span>
               <span
                 >Going so soon? Bummer... Shoot me a message before
                 leaving.</span
               >
-              <span>⚛</span>
+              <span>|</span>
             </div>
           </div>
         </div>

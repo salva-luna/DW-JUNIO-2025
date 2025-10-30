@@ -1,0 +1,63 @@
+# --------------------------------------------------
+# 🌐 Fuerza HTTPS y dominio sin "www"
+# --------------------------------------------------
+RewriteEngine On
+
+# Redirige HTTP → HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Quita el "www" (redirige www.salvadorluna.com → https://salvadorluna.com)
+RewriteCond %{HTTP_HOST} ^www\.salvadorluna\.com$ [NC]
+RewriteRule ^ https://salvadorluna.com%{REQUEST_URI} [L,R=301]
+
+# --------------------------------------------------
+# 🧠 Cabeceras de seguridad recomendadas
+# --------------------------------------------------
+
+# Obliga al navegador a usar HTTPS en todo el dominio (HSTS)
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Política de contenido (modo seguro: primero Report-Only)
+Header set Content-Security-Policy-Report-Only "default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests"
+
+# Protección XSS, clickjacking, MIME sniffing
+Header set X-XSS-Protection "1; mode=block"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+
+# --------------------------------------------------
+# 🚀 Caché estática para mejorar rendimiento
+# --------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresDefault "access plus 1 month"
+</IfModule>
+
+# Cache-Control adicional (para navegadores modernos)
+<FilesMatch "\.(?:css|js|png|jpe?g|webp|svg)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# --------------------------------------------------
+# 🗜️ Compresión gzip / Brotli
+# --------------------------------------------------
+AddDefaultCharset UTF-8
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# --------------------------------------------------
+# 🧹 Limpieza y protección
+# --------------------------------------------------
+# Evita listar archivos
+Options -Indexes
+
+# Redirige errores 404 a la página principal (opcional)
+# ErrorDocument 404 /index.html

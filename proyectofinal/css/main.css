@@ -16,7 +16,7 @@
   --font-body: "Montserrat", sans-serif;
   --font-script: "Pinyon Script", cursive;
   --fs-xs: clamp(0.8rem, 0.2vw + 0.74rem, 0.9rem);
-  --fs-sm: clamp(0.9rem, 0.3vw + 0.82rem, 1rem);
+  --fs-sm: clamp(0.1rem, 0.3vw + 0.82rem, 1rem);
   --fs-base: clamp(1rem, 0.4vw + 0.88rem, 1.125rem);
   --fs-md: clamp(1.125rem, 0.6vw + 0.95rem, 1.375rem);
   --fs-lg: clamp(1.375rem, 1vw + 1rem, 1.75rem);
@@ -77,6 +77,7 @@ HEADER
   width: 250px;
   height: 250px;
 }
+/* Logo SVG, se usa currentColor para que herede color del texto del elemento contenedor */
 .logo-angel .cls-1 {
   fill: currentColor;
 }
@@ -233,6 +234,7 @@ MENU HAMBURGUESA
     pointer-events: auto;
     transform: translateY(0);
   }
+  /* Animacion de las barras del menu hamburguesa, selectores muy especificos pero no encontre otra manera de hacerlo*/
   .nav-toggle-checkbox:checked + .nav-toggle .nav-toggle__bar:first-child {
     transform: translateY(9px) rotate(45deg);
   }
@@ -246,8 +248,7 @@ MENU HAMBURGUESA
 .footer,
 .footer__item,
 .footer__redes,
-.hero__roles,
-.main__scroll {
+.hero__roles {
   position: relative;
 }
 
@@ -308,9 +309,10 @@ HERO
 }
 .footer__scroll,
 .main__scroll {
+  display: flex;
   white-space: nowrap;
-  transform: translate3d(0, 0, 0);
-  will-change: transform;
+  overflow-x: hidden;
+  scroll-behavior: auto;
 }
 .hero__role.is-active {
   opacity: 1;
@@ -318,24 +320,24 @@ HERO
 }
 .main__banner {
   overflow: hidden;
-  padding: 100px 16px;
+  position: relative;
+  user-select: none;
 }
 .main__scroll {
   display: flex;
-  gap: 0;
-  animation: 7s linear infinite desplazamiento-principal;
+  gap: 2rem;
+  align-items: center;
 }
 .footer__grupo,
 .main__grupo {
   display: inline-flex;
-  align-items: center;
-  gap: 18px;
-  padding: 0;
+  gap: .75rem;
+  white-space: nowrap;
 }
 .main__grupo span {
   font-family: var(--font-script);
   font-size: 6.25rem;
-  line-height: var(--lh-tight);
+  line-height: var(--lh-loose);
 }
 /* RESPONSIVE */
 @keyframes desplazamiento-principal {
@@ -355,6 +357,8 @@ SOBRE MI
   padding: 80px 100px;
   margin: 0 0 100px;
 }
+
+/* Grid para organizar los elementos dentro de la seccion About de forma dinamica*/
 .about__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -386,6 +390,7 @@ SOBRE MI
   grid-column: 2;
   grid-row: 3 / span 3;
   border-radius: 8px;
+  /* Para que la imagen no se salga del contenedor cuando cambie de tamaño*/
   overflow: hidden;
   display: flex;
 }
@@ -393,6 +398,7 @@ SOBRE MI
 .about__image picture {
   width: 100%;
   height: 100%;
+  /* Para que la imagen cubra todo el contenedor sin distorsionarse*/
   object-fit: cover;
   display: block;
 }
@@ -412,6 +418,7 @@ FOOTER
 }
 .footer__informacion {
   display: grid;
+  /* Ajuste automatico de columnas */
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 16px;
@@ -446,6 +453,7 @@ FOOTER
     margin: 0 0 80px;
   }
   .about__grid {
+    /* Ajuste automatico a 3 columnas de 1fr de tama;o*/
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, minmax(180px, auto));
     gap: 28px 32px;
@@ -580,6 +588,7 @@ FOOTER
   gap: 20px;
   padding: 10px 0;
 }
+
 .footer__item {
   width: 250px;
   height: 250px;
@@ -593,10 +602,12 @@ FOOTER
 /*===========================
 FOOTER - REDES SOCIALES
 =============================*/
+
 .footer__circle {
   position: absolute;
   width: 100%;
   height: 100%;
+  /* Animacion de giro continuo */
   animation: 12s linear infinite spin;
   z-index: 0;
 }
@@ -607,6 +618,7 @@ FOOTER - REDES SOCIALES
 }
 .footer__item:hover {
   opacity: 0.8;
+  /* La imagen decrece al pasar el cursor */
   transform: translateY(-2px) scale(0.8);
 }
 /* RESPONSIVE */
@@ -622,22 +634,17 @@ FOOTER - REDES SOCIALES
   overflow: hidden;
   background-color: var(--color-crema);
   padding: 24px 0;
-}
-.footer__scroll {
-  display: flex;
   position: relative;
-  gap: 0;
-  animation: 14s linear infinite desplazamiento-footer;
+  user-select: none;
 }
+
 .footer__grupo span {
   font-family: var(--font-script);
   font-size: var(--fs-3xl);
-  line-height: var(--lh-tight);
+  line-height: var(--lh-loose);
   color: var(--color-granate);
 }
-.footer__banner:hover .footer__scroll {
-  animation-play-state: paused;
-}
+
 /* RESPONSIVE */
 @keyframes desplazamiento-footer {
   from {
@@ -705,6 +712,7 @@ PROYECTOS
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 0.6rem;
+  /* Alinear las etiquetas a la derecha */
   justify-content: flex-end;
 }
 .tag {
@@ -731,12 +739,13 @@ previsualizar una imagen
 .proyectos__preview {
   position: fixed;
   pointer-events: none;
-  z-index: 999;
+  z-index: 30;
   width: min(42vw, 460px);
   aspect-ratio: 16/10;
   background: center/cover no-repeat rgba(255, 255, 255, 0.04);
   border: 2px solid var(--color-celeste);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  /* Opacidad 0 para que no se vea */
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.96);
   transition: opacity 0.2s, transform 0.2s, background-image 0.15s linear;
@@ -752,6 +761,7 @@ previsualizar una imagen
     padding: 20px 0;
   }
   .casos-de-estudio {
+    /* Ajuste automatico del ancho maximo del contenedor*/
     --wrap: min(1100px, 94vw);
     padding-inline: clamp(12px, 3vw, 24px);
   }
@@ -776,6 +786,8 @@ PROYECTO INDIVIDUAL
   --gap: clamp(1rem, 2vw, 2rem);
   margin-inline: auto;
 }
+
+/* Justificado de textos para mejor legibilidad */
 .proyecto__ft-lista dd,
 .proyecto__linea,
 .proyecto__texto {
@@ -795,6 +807,7 @@ PROYECTO INDIVIDUAL
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
+/* Grid para organizar la ficha tecnica y el slider de imagenes*/
 .proyecto__contenedor {
   width: var(--wrap);
   margin-inline: auto;
@@ -828,18 +841,36 @@ PROYECTO INDIVIDUAL
   opacity: 0.8;
 }
 .proyecto__puntos {
+  position: absolute;
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
   display: flex;
-  gap: 0.4rem;
-  margin: 0.75rem 0 0;
+  gap: 0.5rem;
+  margin: 0;
+  z-index: 10;
+  pointer-events: auto;
 }
 .punto {
-  width: 0.5rem;
-  height: 0.5rem;
+  /* evita inline-artefactos */
+  display: block;            
+  width: 0.6rem;
+  height: 0.6rem;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.35);
+  border: 0;
+  padding: 0;
+  background: rgba(0,0,0,0.35);
+  cursor: pointer;
 }
 .punto.is-active {
   background: var(--color-crema);
+  box-shadow: 0 0 0 2px rgba(0,0,0,.2) inset;
+}
+
+/* Accesibilidad: enfoque teclado */
+.punto:focus-visible {
+  outline: 2px solid var(--color-crema, #f5e6c8);
+  outline-offset: 2px;
 }
 
 /*===========================
@@ -897,11 +928,11 @@ SLIDER- LIGHTBOX
 =============================*/
 .lightbox {
   position: fixed;
-  inset: 0;
+  inset: 0; /* top: 0; right: 0; bottom: 0; left: 0;*/
   display: none;
   place-items: center;
   background: rgba(0, 0, 0, 0.75);
-  z-index: 10;
+  z-index: 10; /* Asegura que el lightbox esté por encima de otros elementos */
 }
 .lightbox.is-open {
   display: grid;
@@ -956,7 +987,7 @@ SLIDER- LIGHTBOX
 .proyecto__galeria {
   width: var(--wrap);
   margin: 0 auto;
-  padding-block-end: clamp(2rem, 6vw, 5rem);
+  padding-block-end: clamp(2rem, 6vw, 5rem); /* Espacio inferior con clamp para responsive */
   display: grid;
   gap: var(--gap);
 }
@@ -1006,7 +1037,7 @@ SLIDER- LIGHTBOX
   width: 100%;
   height: auto;
   display: block;
-  aspect-ratio: 16/9;
+  aspect-ratio: 16/9; /* Mantener proporción 16:9 */
   background: #000;
   border: 1px solid rgba(71, 16, 11, 0.2);
   outline: 0;
@@ -1043,6 +1074,9 @@ SLIDER- LIGHTBOX
     padding: 0.35rem 0.75rem;
     white-space: nowrap;
   }
+  .proyectos__preview {
+    display: none;
+  }
   .proyecto__contenedor,
   .proyecto__grid--2col {
     grid-template-columns: 1fr;
@@ -1073,6 +1107,7 @@ CONTACTO
   margin: 0 auto;
   padding: clamp(1.25rem, 3vw, 6rem) 0 clamp(2rem, 4vw, 3rem);
 }
+/* Grid para organizar los elementos dentro de la seccion Contacto*/
 .contacto__envoltorio {
   --gap: clamp(1.25rem, 2.5vw, 3rem);
   display: grid;
@@ -1080,6 +1115,7 @@ CONTACTO
   gap: var(--gap);
   align-items: start;
 }
+/* Grid para organizar los elementos unicamente dentor de intro*/
 .contacto__intro {
   grid-column: 1;
   grid-row: 1;
@@ -1110,7 +1146,7 @@ CONTACTO- CAPSULA QUE CAMBIA
 .contacto__adjetivos {
   position: relative;
   display: grid;
-  place-items: center;
+  place-items: center; /* Centra las palabras dentro del contenedor */
   border: 1px solid var(--color-crema);
   border-radius: 50px;
   padding: 4px 10px;
@@ -1120,8 +1156,8 @@ CONTACTO- CAPSULA QUE CAMBIA
   font-size: var(--fs-2xl);
 }
 .contacto__palabras.is-active {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /* Palabra visible */
+  transform: translateY(0); 
 }
 .contacto__descripcion {
   max-width: 60ch;
@@ -1178,7 +1214,7 @@ CONTACTO- CAPSULA QUE CAMBIA
   font-size: var(--fs-xl);
   color: var(--color-granate);
   font-weight: bold;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.01em; 
   margin: 0 0 1rem;
 }
 .contacto__campo {
@@ -1205,7 +1241,7 @@ CONTACTO- CAPSULA QUE CAMBIA
 }
 .contacto__input:focus-visible,
 .contacto__textarea:focus-visible {
-  outline: 0;
+  outline: 0; /* Elimina el outline por defecto */
   border-color: var(--color-celeste);
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 0 3px rgba(169, 189, 195, 0.22);
@@ -1232,7 +1268,7 @@ CONTACTO- CAPSULA QUE CAMBIA
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
   border: var(--color-crema) 1px solid;
   color: var(--color-crema);
-  transform: translateY(-1px);
+  transform: translateY(-1px); /* Efecto de que decrece al pasar el cursor */
 }
 /* RESPONSIVE */
 @media (max-width: 980px) {
@@ -1316,8 +1352,8 @@ CONTACTO- CAPSULA QUE CAMBIA
   }
   .contacto__descripcion,
   .contacto__enlace {
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    overflow-wrap: anywhere; /* Permite romper palabras largas */
+    word-break: break-word; /* Asegura que las palabras largas se rompan */
   }
   .contacto {
     --wrap: 100%;
@@ -1333,21 +1369,23 @@ CONTACTO- CAPSULA QUE CAMBIA
   .contacto__segunda-linea {
     gap: 0.55rem;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
   }
   .contacto__descripcion {
     opacity: 0.9;
     max-width: 65ch;
-    text-wrap: pretty;
+    text-wrap: pretty; /* Mejora el ajuste de texto */
     hyphens: auto;
     display: flex;
     flex-wrap: wrap;
   }
+  
   .contacto__capsula {
     max-width: 100%;
   }
   .contacto__adjetivos {
     min-width: 0;
+    /* Ajusta el ancho al contenido */
     width: fit-content;
     max-width: 100%;
     height: 1.6em;
@@ -1364,6 +1402,7 @@ CONTACTO- CAPSULA QUE CAMBIA
   .contacto__caja {
     grid-column: 1;
     grid-row: auto;
+    /* Elimina el padding extra */
     padding-inline: 0;
   }
   .contacto__formulario {
@@ -1373,6 +1412,7 @@ CONTACTO- CAPSULA QUE CAMBIA
     width: 100%;
     max-width: 100%;
     padding: clamp(1rem, 5vw, 1.5rem);
+    /* Centra el formulario */
     margin-inline: 0;
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
   }
@@ -1386,6 +1426,7 @@ CONTACTO- CAPSULA QUE CAMBIA
   .contacto__textarea {
     padding: 0.75rem 0.9rem;
     border-radius: 10px;
+    /* Asegura que los campos no desborden el contenedor */
     max-width: 100%;
   }
   .contacto__acciones {
@@ -1423,11 +1464,13 @@ CONTACTO- CAPSULA QUE CAMBIA
   }
   .about__title {
     margin: 0 0 16px;
+    /* Ajusta el título para que ocupe toda la fila */
     grid-column: 1/-1;
   }
   .about__grid {
     grid-template-columns: 1fr;
     grid-template-rows: unset;
+    /* establece medida minima y maxima de las filas */
     grid-auto-rows: minmax(80px, auto);
     gap: 16px;
     align-items: center;
@@ -1435,8 +1478,10 @@ CONTACTO- CAPSULA QUE CAMBIA
   .about__item {
     padding: 8px 10px;
     border-top: var(--color-crema) 1px solid;
+    /* Elimina los bordes redondeados */
     border-radius: 0;
   }
+  /* Oculta los items vacíos */
   .about__item:empty {
     display: none;
   }
@@ -1450,6 +1495,7 @@ CONTACTO- CAPSULA QUE CAMBIA
   .about__image picture {
     width: 100%;
     height: 100%;
+    /* Asegura que la imagen cubra el contenedor */
     object-fit: cover;
     display: block;
   }
@@ -1458,8 +1504,8 @@ CONTACTO- CAPSULA QUE CAMBIA
     height: 96px;
   }
   .footer__circle {
-    width: 150%;
-    height: 150%;
+    width: 180%;
+    height: 180%;
   }
   .casos-de-estudio {
     padding: clamp(14px, 5.5vw, 20px);
@@ -1478,6 +1524,7 @@ CONTACTO- CAPSULA QUE CAMBIA
     margin: 0.25rem 0 0;
     gap: 0.45rem 0.5rem;
     width: 100%;
+    /* Asegura que las etiquetas no desborden el contenedor */
     overflow: visible;
   }
   .tag {
@@ -1506,6 +1553,7 @@ CONTACTO- CAPSULA QUE CAMBIA
     border-radius: 14px;
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
   }
+  /* Altura minima para que no colapse */
   .contacto__textarea {
     min-height: 7rem;
   }
@@ -1513,3 +1561,26 @@ CONTACTO- CAPSULA QUE CAMBIA
     border-radius: 999px;
   }
 }
+/* Honeypot: completamente fuera de vista, pero presente en el DOM */
+.contacto__hp-wrap {
+  position: absolute !important;
+  left: -99999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+.contacto__hp { /* por si algún lector visualiza el campo */
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Utilidad para labels solo-lectores de pantalla */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0);
+  border: 0;
+}
+
